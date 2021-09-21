@@ -1,0 +1,12 @@
+if [ ! -d "siralim-ultimate-api" ] ; then
+    git clone git@github.com:rovermicrover/siralim-ultimate-api.git
+fi
+if [ ! -d "siralim-ultimate-nginx" ] ; then
+    git clone git@github.com:rovermicrover/siralim-ultimate-nginx.git
+fi
+
+docker-compose build
+docker-compose up -d --remove-orphans postgres
+./commands/app/migrate
+./commands/app/import
+./commands/app/dev
