@@ -7,6 +7,6 @@ fi
 
 docker-compose build
 docker-compose up -d --remove-orphans postgres
-./commands/app/migrate
-./commands/app/import
-./commands/app/dev
+./commands/api/migrate
+./commands/api/import
+./commands/api/dev
