@@ -1,1 +1,1 @@
-docker-compose run --rm app python -m black --check app
+docker-compose run --rm api python -m black --check app

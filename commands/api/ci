@@ -1,0 +1,6 @@
+docker-compose build api
+docker-compose up -d --remove-orphans postgres
+./commands/api/migrate
+./commands/api/import
+./commands/api/lint-check
+./commands/api/test

@@ -1,1 +1,1 @@
-docker-compose run --rm app python -c 'from app.tests import run; run()'
+docker-compose run --rm api python -c 'from app.tests import run; run()'

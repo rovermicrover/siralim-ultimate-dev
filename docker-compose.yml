@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
 
-  app:
+  api:
     build: ./siralim-ultimate-api
     environment:
       - DATABASE_URL=postgresql://postgres:F00B4RYY@postgres:5432/siralim_ultimate_api
@@ -10,21 +10,21 @@ services:
     volumes:
       - ./siralim-ultimate-api:/code
     networks:
-      - app
+      - api
       - postgres
       - redis
 
   nginx:
     build: ./siralim-ultimate-nginx
     environment:
-      - API_URL=app:8000
-      - API_HOST=app:8000
+      - API_URL=api:8000
+      - API_HOST=api:8000
       - PORT=80
       - PROTOCOL=http
     ports:
       - "80:80"
     networks:
-      - app
+      - api
 
   postgres:
     image: postgres:12.8
@@ -46,6 +46,6 @@ volumes:
   postgres:
 
 networks:
-  app:
+  api:
   postgres:
   redis:
