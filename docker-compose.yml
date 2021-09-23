@@ -7,6 +7,7 @@ services:
     environment:
       - DATABASE_URL=postgresql://postgres:F00B4RYY@postgres:5432/siralim_ultimate_api
       - PORT=8000
+      - ALLOW_ORIGINS=localhost
     volumes:
       - ./siralim-ultimate-api:/code
     networks:
@@ -14,17 +15,31 @@ services:
       - postgres
       - redis
 
+  ui:
+    build: ./siralim-ultimate-ui
+    volumes:
+      - ./siralim-ultimate-ui:/code
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    networks:
+      - ui
+
   nginx:
     build: ./siralim-ultimate-nginx
     environment:
       - API_URL=api:8000
       - API_HOST=api:8000
+      - UI_URL=ui:3000
+      - UI_HOST=ui:3000
       - PORT=80
       - PROTOCOL=http
     ports:
       - "80:80"
     networks:
       - api
+      - ui
 
   postgres:
     image: postgres:12.8
@@ -49,3 +64,4 @@ networks:
   api:
   postgres:
   redis:
+  ui:
