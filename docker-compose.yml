@@ -18,7 +18,8 @@ services:
   ui:
     build: ./siralim-ultimate-ui
     volumes:
-      - ./siralim-ultimate-ui:/code
+      - ./siralim-ultimate-ui/src:/ui/src
+      - ./siralim-ultimate-ui/public:/ui/public
     environment:
       - PORT=3000
     ports:
