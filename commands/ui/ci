@@ -1,2 +1,2 @@
-docker-compose up --build ui
-docker-compose run --rm ui npm test
+docker-compose build ui
+docker-compose run --rm -e CI=true ui npm test
