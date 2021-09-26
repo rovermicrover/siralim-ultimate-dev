@@ -16,7 +16,9 @@ services:
       - redis
 
   ui:
-    build: ./siralim-ultimate-ui
+    build:
+      context: ./siralim-ultimate-ui
+      dockerfile: Dockerfile.dev
     volumes:
       - ./siralim-ultimate-ui/src:/ui/src
       - ./siralim-ultimate-ui/public:/ui/public
