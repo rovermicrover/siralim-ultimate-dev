@@ -2,7 +2,7 @@
 
 ## About
 
-Compising Dev Repo for [siralim-ultimate-api](https://github.com/rovermicrover/siralim-ultimate-api)
+Compising Dev Repo for [siralim-ultimate-api](https://github.com/rovermicrover/siralim-ultimate-api) & [siralim-ultimate-ui](https://github.com/rovermicrover/siralim-ultimate-ui)
 
 ## How To Dev
 
