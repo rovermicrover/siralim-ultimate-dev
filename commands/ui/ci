@@ -1,2 +1,4 @@
 docker-compose build ui
-docker-compose run --rm -e CI=true ui npm test
+./commands/ui/lint
+./commands/ui/format-check
+./commands/ui/test
