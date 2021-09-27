@@ -64,34 +64,34 @@ The API tests than the UI tests will run.
 
 ## Commands
 
-1.```$commands/dev-bootstrap```: Bootstrap the dev env and starts it up
+1.```$ commands/dev-bootstrap```: Bootstrap the dev env and starts it up
 
-2.```$commands/dev```: Starts up the dev env
+2.```$ commands/dev```: Starts up the dev env
 
-3.```$commands/dev-nuke```: Destroy the dev env and start over from ground zero
+3.```$ commands/dev-nuke```: Destroy the dev env and start over from ground zero
 
-3.```$commands/test```: Run all the tests
-
-### API Commands
-
-1.```$commands/api/ci```: Run to check the API in its CI env before build and deploy
-
-2.```$commands/api/import```: Import game data from files
-
-3.```$commands/api/lint```: Lint the API code
-
-4.```$commands/api/lint-check```: Lint the API code and return 0 if lint fails
-
-5.```$commands/api/migrate```: Run outstanding DB migrations for the API
-
-6.```$commands/api/test```: Run the API tests
+3.```$ commands/test```: Run all the tests
 
 ### API Commands
 
-1.```$commands/ui/ci```: Run to check the UI in its CI env before build and deploy
+1.```$ commands/api/ci```: Run to check the API in its CI env before build and deploy
 
-3.```$commands/ui/lint```: Lint the UI code
+2.```$ commands/api/import```: Import game data from files
 
-5.```$commands/ui/format-check```: Format 
+3.```$ commands/api/lint```: Lint the API code
 
-6.```$commands/ui/test```: Run the API tests
+4.```$ commands/api/lint-check```: Lint the API code and return 0 if lint fails
+
+5.```$ commands/api/migrate```: Run outstanding DB migrations for the API
+
+6.```$ commands/api/test```: Run the API tests
+
+### API Commands
+
+1.```$ commands/ui/ci```: Run to check the UI in its CI env before build and deploy
+
+3.```$ commands/ui/lint```: Lint the UI code
+
+5.```$ commands/ui/format-check```: Format 
+
+6.```$ commands/ui/test```: Run the API tests
