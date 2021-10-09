@@ -1,11 +1,17 @@
 docker-compose build ui
 ./commands/ui/lint
 lint=$?
-if (( lint != 0 )); then return lint fi
+if (( lint != 0 )); 
+  then return lint 
+fi
 ./commands/ui/format-check
 format=$?
-if (( format != 0 )); then return format fi
+if (( format != 0 )); 
+  then return format 
+fi
 ./commands/ui/test
 test=$?
-if (( test != 0 )); then return test fi
+if (( test != 0 )); 
+  then return test 
+fi
 docker-compose run --rm -e CI=true -e NODE_ENV=production ui npm run build

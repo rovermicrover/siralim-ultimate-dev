@@ -2,11 +2,17 @@ docker-compose build api
 docker-compose up -d --remove-orphans postgres
 ./commands/api/migrate
 migrate=$?
-if (( migrate != 0 )); then return migrate fi
+if (( migrate != 0 )); 
+  then return migrate 
+fi
 ./commands/api/import
 import=$?
-if (( import != 0 )); then return import fi
+if (( import != 0 )); 
+  then return import 
+fi
 ./commands/api/lint-check
 lint=$?
-if (( lint != 0 )); then return lint fi
+if (( lint != 0 )); 
+  then return lint 
+fi
 ./commands/api/test
