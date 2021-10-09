@@ -2,4 +2,4 @@ docker-compose build ui
 ./commands/ui/lint
 ./commands/ui/format-check
 ./commands/ui/test
-docker-compose run --rm -e CI=true ui npm run build
+docker-compose run --rm -e CI=true -e NODE_ENV=production ui npm run build
