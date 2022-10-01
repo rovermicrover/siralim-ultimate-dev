@@ -65,6 +65,13 @@ services:
     networks:
       - redis
 
+  ocr:
+    build: ./siralim-ultimate-ocr
+    volumes:
+      - ./siralim-ultimate-ocr:/code
+    profiles:
+      - donotstart
+
 volumes:
   postgres:
 

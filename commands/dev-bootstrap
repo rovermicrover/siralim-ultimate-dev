@@ -7,6 +7,9 @@ fi
 if [ ! -d "siralim-ultimate-ui" ] ; then
     git clone https://github.com/rovermicrover/siralim-ultimate-ui
 fi
+if [ ! -d "siralim-ultimate-ocr" ] ; then
+    git clone https://github.com/rovermicrover/siralim-ultimate-ocr
+fi
 
 docker-compose build
 docker-compose up -d --remove-orphans postgres
