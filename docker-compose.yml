@@ -46,6 +46,9 @@ services:
     networks:
       - api
       - ui
+    depends_on:
+      - api
+      - ui
 
   postgres:
     image: postgres:12.8
